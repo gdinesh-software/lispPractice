@@ -1,0 +1,5 @@
+(defun sophisticated()
+  (or (and (oddp 5)
+           (evenp 8))
+      nil))
+(format t "~d" (sophisticated))
