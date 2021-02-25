@@ -1,0 +1,11 @@
+(defun my-union(set1 set2)
+  (cond ((null set2) set1)
+        ((null set1) set2)
+        ((equal set1 set2) set1)
+        ((member (first set2) set1) 
+            (cons (first set2) (my-union (rest set1)
+                                         (rest set2))))
+        (t (cons (first set2) (my-union (rest set1)
+                                        (rest set2))))))
+
+(print (my-union '(1 2 3 4 5) '(5 6 4 3 1)))
