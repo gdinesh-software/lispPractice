@@ -67,7 +67,32 @@
                (descended-from-p
                  (mother your-name) your-ancestor?)))))
 
-(print (descended-from-p 'TAMARA 'ARTHUR))
+; (print (descended-from-p 'TAMARA 'ARTHUR))
 
+(defun ancestors (name)
+  (cond ((null name) nil)
+        (t (union (parents name)
+                  (union (ancestors (father name))
+                         (ancestors (mother name)))))))
 
+; (print (ancestors 'marie))
+
+(defun generation-gap (name ancestor)
+  (g-gap-helper name ancestor 0))
+
+(defun g-gap-helper (name ancestor n)
+  (cond ((null name) n)
+        ((equal name ancestor) n)
+        (t (or (g-gap-helper (father name)
+                             ancestor (1+ n))
+               (g-gap-helper (mother name)
+                             ancestor (1+ n))))))
+
+; (print (generation-gap 'frederick 'colin))
+
+(print (descended-from-p 'robert 'deirdre))
+(print (ancestors 'yvette))
+(print (generation-gap 'olivia 'frank))
+(print (cousins 'peter))
+(print (grandparents 'olivia))
 

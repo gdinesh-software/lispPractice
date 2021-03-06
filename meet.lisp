@@ -1,0 +1,12 @@
+(defvar *friends* nil)
+(defvar *count* 0)
+(defun meet (friend)
+  (cond ((equal (first *friends*) friend)
+        (format t "We just met"))
+        ((member friend *friends*)
+         (format t "We know each other"))
+        (t (push friend *friends*)
+           (incf *count*)
+           (format t "Pleased to meet you"))))
+
+(meet 'fred)

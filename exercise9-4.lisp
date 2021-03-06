@@ -1,0 +1,10 @@
+(defun ninety-nine-bottles (bottles)
+  (cond ((zerop bottles)
+         (format t "Now we ran out of bottles"))
+        (t (format t "~&~S bottles of beer on the wall~%" bottles)
+           (format t "~S bottles of beer!~%" bottles)
+           (format t "Take one down~%")
+           (format t "Pass it around,~%~%")
+           (ninety-nine-bottles (1- bottles)))))
+
+(print (ninety-nine-bottles 3))
