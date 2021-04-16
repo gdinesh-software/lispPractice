@@ -1,7 +1,7 @@
-(defun tree-depth(a-tree)
-  (cond ((atom a-tree) 0)
-        (t (+ 1 (max (tree-depth (car a-tree))
-              (tree-depth (cdr a-tree)))))))
+(defun tree-depth(x)
+  (if (atom x)
+    0
+    (1+ (max (tree-depth (car x))
+             (tree-depth (cdr x))))))
 
-(print (tree-depth '((a . b) . (c . d))))
-(print (max 100 104))
+(print (tree-depth '((1 . 2) (1 . 3))))

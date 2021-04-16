@@ -1,0 +1,13 @@
+(|SYSTEM|::|VERSION| '(20080430.))
+#0Y_ #0Y |CHARSET|::|UTF-8|
+#Y(#:|1 2 (WITH-OPEN-FILE (MYFILE "helloworld.txt" :DIRECTION ...) (FORMAT MYFILE "hello, i am writing this in lisp"))-1|
+   #59Y(03 00 01 00 00 00 00 00 20 01 DA DB 38 05 72 0B 53 1A C7 45 AF DD 30 04
+        41 05 00 00 02 1D 03 14 2F 05 46 54 05 00 00 00 1D 0E 1B 06 05 00 00 00
+        1D 06 14 E0 64 2D 03 05 55 19 02)
+   ("helloworld.txt" :|OUTPUT| #.#'|COMMON-LISP|::|VALUES|
+    #Y(#:|1 2 (WITH-OPEN-FILE (MYFILE "helloworld.txt" :DIRECTION ...) (FORMAT MYFILE "hello, i am writing this in lisp"))-1-1|
+       #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
+       ("hello, i am writing this in lisp")
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+    |COMMON-LISP|::|FORMAT| |COMMON-LISP|::|CLOSE| :|ABORT|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))

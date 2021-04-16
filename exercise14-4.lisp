@@ -1,0 +1,11 @@
+(defmacro simple-rotatef (a b)
+  `(let ((temp 0))
+     (setq temp ,a)
+     (setq ,a ,b)
+     (setq ,b temp)))
+
+(setq a 10)
+(setq b 5)
+(print (list a b))
+(simple-rotatef a b)
+(print (list a b))

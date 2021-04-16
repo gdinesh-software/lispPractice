@@ -1,15 +1,1 @@
-;; Dribble of #<IO TERMINAL-STREAM> started on 2021-03-06 22:33:40.
-#<OUTPUT BUFFERED FILE-STREAM CHARACTER #P"Dinesh.txt">
-Break 1 [2]> (setf x nil)
-NIL
-Break 1 [2]> (push x x)
-(NIL)
-Break 1 [2]> (push x x)
-((NIL) NIL)
-Break 1 [2]> (push x x)
-(((NIL) NIL) (NIL) NIL)
-Break 1 [2]> (push x x)
-((((NIL) NIL) (NIL) NIL) ((NIL) NIL) (NIL) NIL)
-Break 1 [2]> 
-[3]> 
-Bye.
+Hello, world

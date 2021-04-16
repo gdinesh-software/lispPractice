@@ -1,0 +1,5 @@
+(defun factorial (num)
+  (do ((i num (1- i))
+       (result 1 (* result i)))
+    ((zerop i) result)))
+(print (factorial 6))
