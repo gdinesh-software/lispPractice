@@ -1,9 +1,8 @@
-(defun sum-numeric-elements(list-of-elements)
-  (cond ((numberp (first list-of-elements))
-         (+ (first list-of-elements)
-            (sum-numeric-elements (rest list-of-elements))))
-        ((null list-of-elements)
-         0)
-        (T (sum-numeric-elements (rest list-of-elements)))))
+(defun sum-integers (lst)
+  (cond
+    ((null lst) 0)
+    ((integerp (first lst)) (+ (first lst) (sum-integers (rest lst))))
+    (t (sum-integers (rest lst)))))
 
-; (print (sum-numeric-elements '(2 bears 3 bowls and 1 girls)))
+(print (sum-integers '( 3 boys 3 girls and 1 cup )))
+
