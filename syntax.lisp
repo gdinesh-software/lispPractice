@@ -1,3 +1,5 @@
+;; TODO: MAKE A GODDAMN PROJECT
+
 (defun main()
   (print "Hello world"))
 
